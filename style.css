@@ -133,7 +133,7 @@ header a {
 
 .thumbnail .item .content {
     position: absolute;
-    text-shadow: 5px 5 5px rgba(0, 0, 0, 0.75);
+    text-shadow: 10px 10px 10px black;
     bottom: 10px;
     left: 10px;
     right: 10px;
