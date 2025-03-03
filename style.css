@@ -94,12 +94,14 @@ header a {
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
+    box-shadow: 0 0 10px black;
 }
 
 .carousel .list .item .content button:nth-child(2) {
     background-color: transparent;
     color: #eee;
     border: 1px solid #eee;
+    box-shadow: 0 0 10px black;
 }
 
 /* Thumbnail */
