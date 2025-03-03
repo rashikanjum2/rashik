@@ -80,6 +80,10 @@ header a {
     color: #f1683a;
 }
 
+.carousel .list .item .content .des {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
 .carousel .list .item .content .buttons {
     display: grid;
     grid-template-columns: repeat(2, 130px);
@@ -94,14 +98,14 @@ header a {
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 .carousel .list .item .content button:nth-child(2) {
     background-color: transparent;
     color: #eee;
     border: 1px solid #eee;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 /* Thumbnail */
@@ -131,7 +135,7 @@ header a {
 
 .thumbnail .item .content {
     position: absolute;
-    text-shadow: 5px 5 5px black;
+    text-shadow: 5px 5 5px rgba(0, 0, 0, 0.75);
     bottom: 10px;
     left: 10px;
     right: 10px;
