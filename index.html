@@ -25,7 +25,7 @@
         	position: relative;
             width: 100%;
             overflow: hidden;
-            background: linear-gradient(to right, #00008B, #8B0000);
+            background: linear-gradient(to right, #8B0000, #00008B);
             padding: 10px 0;
             white-space: nowrap;
             font-size: 18px;
@@ -41,7 +41,7 @@
             font-weight: bold;
         }
         @keyframes marquee {
-            from { transform: translateX(100%); } /* Move completely off-screen */
+            from { transform: translateX(100vw); } /* Move completely off-screen */
             to { transform: translateX(-100%); } /* Scroll fully to the left */
         }
 
