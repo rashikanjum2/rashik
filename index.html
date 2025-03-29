@@ -21,6 +21,30 @@
             box-sizing: border-box;
         }
 
+        .marquee-container {
+        	position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(to right, red, blue);
+            padding: 10px 0;
+            white-space: nowrap;
+            font-size: 18px;
+        	border-radius: 10px;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+            color: white;
+            will-change: transform;
+        }
+        .donor {
+            font-weight: bold;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100vw); } /* Move completely off-screen */
+            to { transform: translateX(-100%); } /* Scroll fully to the left */
+        }
+
         h1 {
             font-family: 'Archivo Black', sans-serif;
             font-size: 5rem;
@@ -232,6 +256,13 @@
     </style>
 </head>
 <body>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="donor">Geppetto</span>: $64.95 | 
+            <span class="donor">Altairen</span>: $2.06
+        </div>
+    </div>
 
     <h1>SUPPORT CITADEL</h1>
     <p>Help CITADEL maintain its quality by supporting us. Unfortunately, PayPal is unavailable in Bangladesh, so we cannot receive donations through that service.</p>
