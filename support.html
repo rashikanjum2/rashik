@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support CITADEL</title>
+    <style>
+        /* Importing Archivo Black font */
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+        /* General Page Styling */
+        body {
+            background: linear-gradient(to right, #00008B, #8B0000); /* Dark blue to dark red gradient */
+            color: white;
+            font-family: 'Archivo Black', sans-serif; /* Apply Archivo Black font */
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            background-image: url('https://i.pinimg.com/originals/9a/02/f1/9a02f1d620d4a65bee197a69ee1d6a1b.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+        }
+
+        h2 {
+            font-size: 2rem; /* Adjusted size */
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        h3 {
+            font-size: 1.5rem; /* Adjusted size */
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            font-size: 16px; /* Adjusted size */
+            max-width: 900px; /* Adjusted max width */
+            margin: 0 auto 20px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Donation Section */
+        .donation-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adjusted gap */
+            max-width: 60rem;
+            margin: 20px auto;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+        }
+
+        .donation-box {
+            background: linear-gradient(to right, #00008B, #8B0000); /* Dark blue to dark red gradient */
+            padding: 1.5rem; /* Adjusted padding */
+            border-radius: 10px;
+            width: 25rem; /* Adjusted width */
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 139, 0.5), 0 0 10px rgba(139, 0, 0, 0.5); /* Blue to red gradient shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .amount-box {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 18px; /* Adjusted size */
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .checklist {
+            text-align: left;
+            font-size: 14px; /* Adjusted size */
+            
+            max-width: 20rem;
+        }
+
+        .checklist li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .checklist li::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-size: contain;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+
+        .checkmark::before {
+            background-image: url('https://uploads.disquscdn.com/images/3baa38a894105c8af2d617a00a5d65f013fad03e03a6d37ef612f5a28f87327a.png');
+        }
+
+        .crossmark::before {
+            background-image: url('https://uploads.disquscdn.com/images/d91ebc76826f081c0ebdffff00a8edcbf5cbd2134902063c5134b773126f22a0.png');
+        }
+
+        /* Donate Button */
+        .donate-button {
+            font-family: 'Archivo Black', sans-serif;
+            background: #0044AA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px; /* Adjusted size */
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+            transform-origin: center; /* Ensure scaling happens from the center */
+            margin-top: 1.25rem;
+        }
+
+        .donate-button:hover {
+            transform: scale(1.1); /* Scale effect */
+            background: #003388; /* Hover background color */
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            margin-top: 5rem;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem; /* Adjusted size on smaller screens */
+            }
+
+            h2 {
+                font-size: 1.75rem; /* Adjusted size on smaller screens */
+            }
+
+            h3 {
+                font-size: 1.25rem; /* Adjusted size on smaller screens */
+            }
+
+            p {
+                font-size: 14px; /* Adjusted font size on smaller screens */
+            }
+
+            .donation-container {
+                flex-direction: column; /* Stack donation boxes vertically on mobile */
+                gap: 20px; /* Reduced gap between boxes */
+            }
+
+            .donation-box {
+                width: 100%; /* Adjusted box width on smaller screens */
+                padding: 1.2rem; /* Adjusted padding for better spacing */
+                box-sizing: border-box; /* Ensure padding doesn't break layout */
+            }
+
+            .amount-box {
+                font-size: 16px; /* Adjusted font size for mobile */
+                padding: 6px; /* Adjusted padding */
+            }
+
+            .checklist {
+                font-size: 13px; /* Smaller font size for mobile */
+            }
+
+            .donate-button {
+                font-size: 14px; /* Adjusted button font size */
+                padding: 8px 16px; /* Adjusted button padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3rem; /* Smaller size for extra small screens */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller size for extra small screens */
+            }
+
+            h3 {
+                font-size: 1.1rem; /* Smaller size for extra small screens */
+            }
+
+            p {
+                font-size: 13px; /* Smaller font size for small screens */
+            }
+
+            .donation-box {
+                width: 100%; /* Full-width boxes for extra small screens */
+                padding: 1rem; /* Reduced padding for small screens */
+            }
+
+            .amount-box {
+                font-size: 15px; /* Adjusted font size for mobile */
+                padding: 5px; /* Adjusted padding */
+            }
+
+            .checklist {
+                font-size: 12px; /* Smaller font size for extra small screens */
+            }
+
+            .donate-button {
+                font-size: 13px; /* Smaller font size for donate button on small screens */
+                padding: 6px 12px; /* Adjusted padding for button */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>SUPPORT CITADEL</h1>
+    <p>Help CITADEL maintain its quality by supporting us. Unfortunately, PayPal is unavailable in Bangladesh, so we cannot receive donations through that service.</p>
+
+    <h2>Ways to Donate:</h2>
+
+    <div class="donation-container">
+        <!-- Payoneer -->
+        <div class="donation-box">
+            <h3>Payoneer</h3>
+            <div class="amount-box">&gt; $20</div>
+            <ul class="checklist">
+                <li class="checkmark">For donations of $20 or more</li>
+                <li class="checkmark">One-time donation only</li>
+                <li class="checkmark">Low transaction fees</li>
+                <li class="checkmark">Low tax rates</li>
+                <li class="crossmark">No monthly subscription</li>
+            </ul>
+            <a href="https://forms.gle/fqH1zDFsBjoj2nwEA" target="_blank">
+                <button class="donate-button">Donate</button>
+            </a>
+        </div>
+
+        <!-- Patreon -->
+        <div class="donation-box">
+            <h3>Patreon</h3>
+            <div class="amount-box">$5 - $20</div>
+            <ul class="checklist">
+                <li class="checkmark">Good for $5 to $20 donations</li>
+                <li class="checkmark">Various donation tiers</li>
+                <li class="checkmark">Monthly subscription</li>
+                <li class="crossmark">High tax rates</li>
+                <li class="crossmark">Delayed payment processing</li>
+            </ul>
+            <a href="https://www.patreon.com/CITADEL659" target="_blank">
+                <button class="donate-button">Donate</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; CITADEL 2023-2025
+    </footer>
+
+</body>
+</html>
